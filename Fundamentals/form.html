@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #1a1a1a;
+            background-image: url(https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+      
+        #login {
+            background: rgba(255, 228, 196, 0.9); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+       
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+     
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(64, 64, 117);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(30, 30, 91);
+        }
+
+    
+        label {
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <form>
+            <label for="email">Email ID</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
