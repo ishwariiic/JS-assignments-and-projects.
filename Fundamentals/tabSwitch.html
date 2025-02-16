@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tabs">
+        <div id="home">Home</div>
+        <div id="about">About</div>
+        <div id="contact">Contact</div>
+        <h3 id="hometext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim aperiam recusandae facilis, aliquid obcaecati dolorem repellat reprehenderit incidunt quos harum, ratione magnam debitis voluptatibus possimus quod, omnis numquam dolorum.</h3>
+        <h3 id="abouttext"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat corrupti quibusdam accusamus blanditiis reiciendis optio explicabo, a praesentium corporis eos! Officiis accusamus blanditiis dolor. Sed tempora voluptate sequi dolor nam ut totam veritatis. Dolorem aut, minus blanditiis delectus sunt officia! Ipsam illo, commodi libero cupiditate, numquam a magni odit at laudantium autem maiores saepe. Tempora aliquid fugiat vero expedita perferendis.</h3>
+        <h3 id="contacttext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perferendis quod atque porro perspiciatis! Dolor laboriosam omnis ea? Natus reprehenderit veritatis iure nihil quam amet atque quibusdam tempore. Quasi labore ratione blanditiis quaerat? Sed repellendus, eveniet magni dolor ea, porro ad, soluta accusamus molestiae possimus voluptatem dolorem facilis illo pariatur.</h3>
+        <style>
+            #home,#about,#contact{
+                background-color: aquamarine;
+                border:2px solid black;
+                padding: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            #tabs{
+                display: flex;
+                gap:10px;
+            }
+            #hometext,#abouttext,#contacttext{
+                display: none;
+                padding: 10px;
+                margin:10px;
+                width:50%;
+
+            }
+        </style>
+    </div>
+<script>
+    let home=document.querySelector("#home");
+    let about=document.querySelector("#about");
+    let contact=document.querySelector("#contact");
+    let hometext=document.querySelector("#hometext");
+    let abouttext=document.querySelector("#abouttext");
+    let contacttext=document.querySelector("#contacttext");
+  home.addEventListener('click',function(){
+    clearing();
+    hometext.style.display="block";
+    hometext.style.width="50%";
+
+  })
+  about.addEventListener('click',function(){
+    clearing();
+    abouttext.style.display="block";
+    abouttext.style.width="50%";
+
+  })
+
+  contact.addEventListener('click',function(){
+    clearing();
+    contacttext.style.display="block";
+    contacttext.style.width="50%";
+
+  })
+
+
+function clearing(){
+  document.querySelectorAll("h3").forEach(function(h3){
+    h3.style.display="none";
+
+  })
+}
+</script>
+</body>
+</html>
